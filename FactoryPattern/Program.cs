@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("What kind of vehicle would you like to make?");
+            string response = Console.ReadLine();
+            IVehicle vehicle = VehicleFactory.GetVehicle(response);
+            vehicle.Build();
+            Console.ReadLine();
+
         }
     }
 }
